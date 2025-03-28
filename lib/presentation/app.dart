@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:solid_color_generator/logic/color_generator.dart';
-import 'package:solid_color_generator/ui/gesture_detector_with_ripple_effect.dart';
+import 'package:solid_color_generator/presentation/components/gesture_detector_with_ripple_effect.dart';
 
-void main() {
-  runApp(const App());
-}
-
+/// The main application widget.
 class App extends StatefulWidget {
+  /// Creates the main application widget.
   const App({super.key});
 
   @override

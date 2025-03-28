@@ -8,21 +8,18 @@
             "name": "solid_color_generator",
             "request": "launch",
             "type": "dart",
-            "program": "lib/app.dart"
         },
         {
             "name": "solid_color_generator (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",
-            "program": "lib/app.dart"
         },
         {
             "name": "solid_color_generator (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release",
-            "program": "lib/app.dart"
         }
     ]
 }

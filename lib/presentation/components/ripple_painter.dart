@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
+/// A custom painter that paints a circle that expands from a given position.
 class RipplePainter extends CustomPainter {
   final Offset _position;
   final double _radius;
 
+  /// Creates a [RipplePainter].
   RipplePainter(
     this._position,
     this._radius,

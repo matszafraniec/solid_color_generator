@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:solid_color_generator/ui/ripple_painter.dart';
+import 'package:solid_color_generator/presentation/components/ripple_painter.dart';
 
+const _defaultAnimationDuration = Duration(milliseconds: 300);
+const _rippleRadiusShift = 100;
+
+/// A [GestureDetector] that triggers a ripple effect when tapped.
+/// The ripple effect is achieved by painting a circle that expands from the
+/// point where the tap occurred.
 class GestureDetectorWithRippleEffect extends StatefulWidget {
+  /// The callback that is called when the widget is tapped.
   final VoidCallback onTap;
+
+  /// The widget that is wrapped by the [GestureDetectorWithRippleEffect].
   final Widget child;
 
+  /// Creates a [GestureDetectorWithRippleEffect].
   const GestureDetectorWithRippleEffect({
     required this.onTap,
     required this.child,
@@ -45,9 +55,11 @@ class _GestureDetectorWithRippleEffectState
   void _setupAnimationController() {
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 300),
+      duration: _defaultAnimationDuration,
     )..addListener(
-        () => setState(() => _rippleRadius = _controller.value * 100),
+        () => setState(
+          () => _rippleRadius = _controller.value * _rippleRadiusShift,
+        ),
       );
   }
 
