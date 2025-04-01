@@ -2,7 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 
 const _alpha = 255;
-const _maxRGB = 255;
+const _maxRGB = 256;
 
 /// Color generator class, generates random colors.
 class ColorGenerator {

@@ -2,7 +2,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:solid_color_generator/logic/color_generator.dart';
 
 const _alpha = 255;
-const _maxRGB = 255;
+const _maxRGB = 256;
 
 void main() {
   group('ColorGenerator', () {
